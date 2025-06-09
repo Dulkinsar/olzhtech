@@ -69,3 +69,17 @@ yarn-error.log
 # misc
 *.backup
 *.swp
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
