@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olzh Tech - Defense Technology Solutions</title>
+    <style>
+        :root {
+            --primary-color: #0A192F;
+            --secondary-color: #112240;
+            --accent-color: #00F5FF;
+            --text-color: #FFFFFF;
+            --gray-800: #1A1A1A;
+            --gray-700: #2D2D2D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)),
+                        url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="none"/><path d="M0 0h1v1H0z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: 40px 40px;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--accent-color), #4ADE80);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #8892B0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #00D4DD;
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(0, 245, 255, 0.1);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Solutions Grid */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .solution-card {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .solution-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--secondary-color);
+            border: 1px solid var(--gray-700);
+            border-radius: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Olzh Tech</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Olzh Tech</h1>
+                <p>Pioneering the Future of Defense Technology</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Contact Us</a>
+                    <a href="#solutions" class="btn btn-secondary">Our Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Olzh Tech</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Olzh Tech is at the forefront of defense technology, developing advanced drone systems and software solutions for global security needs. We are committed to technological sovereignty and innovation.
+        </p>
+    </section>
+
+    <section id="solutions" style="background-color: var(--secondary-color);">
+        <div class="container">
+            <h2 class="section-title">Our Solutions</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>Drone Systems</h3>
+                    <p>Advanced UAV technology for defense and surveillance operations</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Software Solutions</h3>
+                    <p>Cutting-edge software for defense systems integration</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Research & Development</h3>
+                    <p>Innovative defense technology research and development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Olzh Tech. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
