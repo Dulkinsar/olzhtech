@@ -336,6 +336,15 @@
             color: var(--defense-blue);
         }
 
+        .footer-links .link-separator {
+            color: var(--text-secondary);
+            margin: 0 0.5rem;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
         .social-icons a {
             color: var(--text-secondary);
             font-size: 1.5rem;
@@ -546,6 +555,162 @@
                 margin-bottom: 0;
             }
         }
+
+        /* New Capabilities Section */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .capability-card {
+            background: var(--defense-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 191, 178, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 191, 178, 0.2);
+        }
+
+        .capability-card h3 {
+            color: var(--defense-blue);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .capability-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* New Use Cases Section */
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .use-case-card {
+            background: var(--defense-black);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 191, 178, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 191, 178, 0.2);
+        }
+
+        .use-case-card h3 {
+            color: var(--defense-blue);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .use-case-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* New System Architecture Section */
+        .architecture-diagram {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .architecture-diagram .placeholder-image {
+            max-width: 90%;
+            height: auto;
+            border: 1px solid var(--defense-gray);
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .architecture-diagram .image-subtext {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* New Roadmap Section */
+        .roadmap-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            padding-left: 20px; /* Space for the timeline line */
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--defense-gray);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0.5rem;
+            width: 18px;
+            height: 18px;
+            background-color: var(--defense-blue);
+            border-radius: 50%;
+            border: 2px solid var(--defense-black); /* To make it stand out on the line */
+        }
+
+        .timeline-year {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--defense-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* New Download Materials Section */
+        .download-materials .download-buttons {
+            margin-top: 3rem;
+        }
+
+        .download-materials .cta-button {
+            margin-bottom: 1.5rem; /* Space between button and optional link */
+        }
+
+        .download-materials .optional-link a {
+            color: var(--text-dark); /* Color for link on light background */
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .download-materials .optional-link a:hover {
+            color: var(--defense-blue);
+        }
     </style>
 </head>
 <body>
@@ -563,10 +728,9 @@
     <main>
         <section class="hero">
             <div class="container hero-content">
-                <h1>Software for Autonomous Defense Infrastructure</h1>
-                <p>Based in Kazakhstan, Olzh Tech delivers cutting-edge defense software systems built for modern conflict environments, supporting sovereign innovation and national security initiatives.</p>
-                <a href="#contact" class="cta-button">Request Briefing</a>
-                <a href="#" class="cta-button secondary-button">View Overview Deck</a>
+                <h1>Software for Autonomous Defense Systems</h1>
+                <p>Olzh Tech builds modular software for drones, surveillance systems, and autonomous defense platforms. Founded in 2025 and based in Almaty, we develop sovereign technologies for nations and partners seeking control over their own security systems.</p>
+                <a href="/OlzhTech_Deck.pdf" class="cta-button">Request Overview Deck</a>
             </div>
         </section>
 
@@ -579,10 +743,38 @@
                 </div>
             </div>
         </section>
-        
-        <section class="key-stats section-divider-dark">
+
+        <section class="capabilities section-divider-dark">
             <div class="container">
-                <h2 class="section-title text-dark">Key Statistics</h2>
+                <h2 class="section-title text-dark">Core Capabilities</h2>
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <h3>Autonomy Engine</h3>
+                        <p>AI logic for pathfinding, tracking, and behavior in drones and robotics.</p>
+                    </div>
+                    <div class="capability-card">
+                        <h3>Sensor Fusion Layer</h3>
+                        <p>Software that combines visual, thermal, GPS, and LIDAR data into one real-time system.</p>
+                    </div>
+                    <div class="capability-card">
+                        <h3>Encrypted Communications</h3>
+                        <p>Custom protocol stack using AES-256 and QUIC-style encrypted messaging.</p>
+                    </div>
+                    <div class="capability-card">
+                        <h3>Operator Interface SDK</h3>
+                        <p>A dashboard and front-end layer for testing, override, fleet control, and simulation.</p>
+                    </div>
+                    <div class="capability-card">
+                        <h3>Edge Logging + On-Device AI</h3>
+                        <p>Offline logs, post-mission playback, and low-latency model updates without cloud access.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="key-stats section-divider-light">
+            <div class="container">
+                <h2 class="section-title">Key Statistics</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>>30k+</h3>
@@ -595,6 +787,26 @@
                     <div class="stat-card">
                         <h3>Partnership</h3>
                         <p>with [redacted] defense integrator</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases section-divider-dark">
+            <div class="container">
+                <h2 class="section-title text-dark">Deployment Scenarios</h2>
+                <div class="use-case-grid">
+                    <div class="use-case-card">
+                        <h3>Surveillance Drone Software</h3>
+                        <p>Real-time autonomous control logic for ISR applications.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <h3>Border Zone Automation</h3>
+                        <p>Software to coordinate surveillance platforms with secure relay logic.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <h3>Defense Simulation Labs</h3>
+                        <p>Tools for testing AI models in synthetic training environments.</p>
                     </div>
                 </div>
             </div>
@@ -615,9 +827,49 @@
             </div>
         </section>
 
-        <section class="clients-partners section-divider-dark">
+        <section class="architecture section-divider-dark">
             <div class="container">
-                <h2 class="section-title text-dark">Clients & Partners</h2>
+                <h2 class="section-title text-dark">System Architecture</h2>
+                <div class="architecture-diagram">
+                    <img src="architecture-diagram.png" alt="System Architecture Diagram" class="placeholder-image">
+                    <p class="image-subtext">Modular, scalable, and secure by design. Full technical overview available upon request.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="roadmap section-divider-light">
+            <div class="container">
+                <h2 class="section-title">Roadmap 2025–2027</h2>
+                <div class="roadmap-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-description">R&D of modular autonomy and comms stack</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-description">Internal testing and expansion of development team</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2027</div>
+                        <div class="timeline-description">Pilot announcements with European defense partners</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-materials section-divider-dark">
+            <div class="container">
+                <h2 class="section-title text-dark">Access Our Investor Materials</h2>
+                <div class="download-buttons text-center">
+                    <a href="/OlzhTech_Deck.pdf" class="cta-button">Download Capabilities Deck</a>
+                    <p class="optional-link"><a href="#" class="text-dark">Request Technical Whitepaper</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients-partners section-divider-light">
+            <div class="container">
+                <h2 class="section-title">Clients & Partners</h2>
                 <div class="client-logos">
                     <!-- Placeholder logos -->
                     <img src="https://via.placeholder.com/150x80/333333/F0F0F0?text=Client+A" alt="Client A" class="client-logo">
@@ -628,9 +880,9 @@
             </div>
         </section>
 
-        <section class="testimonial section-divider-light">
+        <section class="testimonial section-divider-dark">
             <div class="container">
-                <h2 class="section-title">What Our Partners Say</h2>
+                <h2 class="section-title text-dark">What Our Partners Say</h2>
                 <blockquote class="quote">
                     "Olzh Tech's system architecture exceeded our operational resilience benchmarks, delivering unparalleled performance in the most demanding environments."
                     <cite>— Strategic Advisor, [Redacted Organization]</cite>
@@ -667,23 +919,18 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
-                <a href="#about">About</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#contact">Contact</a>
-                <a href="#">Privacy Policy</a>
+                <a href="https://linkedin.com/company/olzhtech" target="_blank">LinkedIn</a>
+                <span class="link-separator">|</span>
+                <a href="#" >Whitepaper</a>
+                <span class="link-separator">|</span>
+                <a href="/OlzhTech_Deck.pdf">Overview Deck</a>
             </div>
             <div class="social-icons">
                 <a href="mailto:ops@olzhtech.kz">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://linkedin.com/company/olzhtech" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/olzhtech" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
             </div>
-            <p class="copyright">© Olzh Technologies. All Rights Reserved.</p>
+            <p class="copyright">© 2025 Olzh Technologies. All Rights Reserved.</p>
         </div>
     </footer>
 
