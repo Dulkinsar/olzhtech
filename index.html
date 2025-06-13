@@ -6,7 +6,7 @@
     <title>Olzh Tech - Sovereign Defense Software</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         :root {
@@ -32,6 +32,11 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700; /* Default heading weight */
         }
 
         .container {
@@ -94,10 +99,8 @@
 
         /* Hero Section */
         .main-intro-content {
-            padding-top: 10rem; /* Adjust this value based on header height + desired spacing */
-            display: block; /* Change from flex to block */
-            /* min-height: 100vh; Removed */
-            /* align-items: center; Removed */
+            padding-top: 12rem; /* Increased padding to ensure content clears fixed header */
+            display: block;
             position: relative;
             overflow: hidden;
             background: none; 
@@ -777,7 +780,7 @@
                         <p>Software that combines visual, thermal, GPS, and LIDAR data into one real-time system.</p>
                     </div>
                     <div class="capability-card">
-                        <h3>Encrypted Communications</h3>
+                        <h3>Encrypted Comms</h3>
                         <p>Custom protocol stack using AES-256 and QUIC-style encrypted messaging.</p>
                     </div>
                     <div class="capability-card">
@@ -785,7 +788,7 @@
                         <p>A dashboard and front-end layer for testing, override, fleet control, and simulation.</p>
                     </div>
                     <div class="capability-card">
-                        <h3>Edge Logging + On-Device AI</h3>
+                        <h3>Edge Logging & AI</h3>
                         <p>Offline logs, post-mission playback, and low-latency model updates without cloud access.</p>
                     </div>
                 </div>
@@ -812,76 +815,65 @@
             </div>
         </section>
 
-        <section class="use-cases section-divider-dark">
+        <section class="deployment-scenarios section-divider-dark">
             <div class="container">
                 <h2 class="section-title text-dark">Deployment Scenarios</h2>
                 <div class="use-case-grid">
                     <div class="use-case-card">
-                        <h3>Surveillance Drone Software</h3>
+                        <h3>ISR Autonomy Kits</h3>
                         <p>Real-time autonomous control logic for ISR applications.</p>
                     </div>
                     <div class="use-case-card">
-                        <h3>Border Zone Automation</h3>
+                        <h3>Perimeter Defense Stack</h3>
                         <p>Software to coordinate surveillance platforms with secure relay logic.</p>
                     </div>
                     <div class="use-case-card">
-                        <h3>Defense Simulation Labs</h3>
+                        <h3>Defense AI Sim Labs</h3>
                         <p>Tools for testing AI models in synthetic training environments.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="investor-deck section-divider-light">
+        <section class="architecture section-divider-light">
             <div class="container">
-                <h2 class="section-title">Investor Overview</h2>
-                <p class="text-center">Access our comprehensive investor deck for a deeper dive into our vision, technology, and market strategy.</p>
-                <div class="deck-preview">
-                    <!-- Placeholder for PDF preview -->
-                    <img src="https://via.placeholder.com/600x400?text=Investor+Deck+Preview" alt="Investor Deck Preview" class="placeholder-image">
-                </div>
-                <div class="text-center" style="margin-top: 2rem;">
-                    <a href="#" class="cta-button">Download Deck</a>
-                    <!-- Optional: Add form for email gate -->
-                </div>
-            </div>
-        </section>
-
-        <section class="architecture section-divider-dark">
-            <div class="container">
-                <h2 class="section-title text-dark">System Architecture</h2>
+                <h2 class="section-title">System Architecture</h2>
                 <div class="architecture-diagram">
                     <a href="pictures/arch.pdf" target="_blank">
-                        <img src="https://via.placeholder.com/800x500?text=System+Architecture+Diagram" alt="System Architecture Diagram" class="placeholder-image">
+                        <img src="pictures/architecture-diagram.png" alt="System Architecture Diagram" class="placeholder-image">
                     </a>
-                    <p class="image-subtext">Modular, scalable, and secure by design. Full technical overview available upon request.</p>
+                    <p class="image-subtext">Modular control plane—zero‑cloud, real‑time ops.</p>
                 </div>
             </div>
         </section>
 
-        <section class="roadmap section-divider-light">
+        <section class="roadmap section-divider-dark">
             <div class="container">
-                <h2 class="section-title">Roadmap 2025–2027</h2>
+                <h2 class="section-title">Roadmap 2025–2028</h2>
                 <div class="roadmap-timeline">
                     <div class="timeline-item">
                         <div class="timeline-year">2025</div>
-                        <div class="timeline-description">R&D of modular autonomy and comms stack</div>
+                        <div class="timeline-description">Internal R&D</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2026</div>
-                        <div class="timeline-description">Internal testing and expansion of development team</div>
+                        <div class="timeline-description">Testing + team growth</div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2027</div>
-                        <div class="timeline-description">Pilot announcements with European defense partners</div>
+                        <div class="timeline-description">EU pilot partnerships</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2028</div>
+                        <div class="timeline-description">SDK release</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="download-materials section-divider-dark">
+        <section class="download-materials section-divider-light">
             <div class="container">
-                <h2 class="section-title text-dark">Access Our Investor Materials</h2>
+                <h2 class="section-title">Access Our Investor Materials</h2>
                 <div class="download-buttons text-center">
                     <a href="pictures/capabilities.pdf" class="cta-button">Download Capabilities Deck</a>
                     <p class="optional-link"><a href="pictures/capabilities.pdf" class="text-dark" target="_blank">Request Technical Whitepaper</a></p>
@@ -889,7 +881,7 @@
             </div>
         </section>
 
-        <section class="clients-partners section-divider-light">
+        <section class="clients-partners section-divider-dark">
             <div class="container">
                 <h2 class="section-title">Clients & Partners</h2>
                 <div class="client-logos">
@@ -902,9 +894,9 @@
             </div>
         </section>
 
-        <section class="testimonial section-divider-dark">
+        <section class="testimonial section-divider-light">
             <div class="container">
-                <h2 class="section-title text-dark">What Our Partners Say</h2>
+                <h2 class="section-title">What Our Partners Say</h2>
                 <blockquote class="quote">
                     "Olzh Tech's system architecture exceeded our operational resilience benchmarks, delivering unparalleled performance in the most demanding environments."
                     <cite>— Strategic Advisor, [Redacted Organization]</cite>
@@ -941,14 +933,10 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
-                <a href="https://linkedin.com/company/olzhtech" target="_blank">LinkedIn</a>
-                <span class="link-separator">|</span>
-                <a href="pictures/capabilities.pdf" target="_blank">Whitepaper</a>
-                <span class="link-separator">|</span>
-                <a href="pictures/deck.pdf" target="_blank">Overview Deck</a>
+                <!-- Removed LinkedIn, Whitepaper, Overview Deck links as per new instruction -->
             </div>
             <div class="social-icons">
-                <a href="mailto:ops@olzhtech.kz">
+                <a href="mailto:mukhammeddulatolzhabay@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
