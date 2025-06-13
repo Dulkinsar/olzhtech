@@ -48,15 +48,15 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 0;
-            background: rgba(8, 8, 8, 0.8); /* Match new defense-black */
+            padding: 0.5rem 0; /* Reduced padding to make header shorter */
+            background: rgba(8, 8, 8, 0.8);
             backdrop-filter: blur(10px);
             z-index: 100;
-            transition: border-bottom 0.3s ease; /* For subtle border on scroll */
+            transition: border-bottom 0.3s ease;
         }
 
         header.scrolled {
-            border-bottom: 1px solid rgba(0, 191, 178, 0.2); /* Subtle border */
+            border-bottom: 1px solid rgba(0, 123, 255, 0.2); /* Adjusted to new blue */
         }
 
         nav {
@@ -66,15 +66,15 @@
         }
 
         .logo {
-            /* Removed font-size and font-weight as it's now an image */
-            /* color: var(--defense-blue); */
+            display: flex; /* Ensure logo image is centered if space allows */
+            align-items: center;
             text-decoration: none;
         }
 
         .logo-img {
-            height: 130px; /* Adjust as needed for logo size */
+            height: 100px; /* Increased logo size further */
             width: auto;
-            filter: brightness(1.2); /* Slightly increase brightness if needed for visibility */
+            filter: brightness(1.2);
         }
 
         .nav-links {
@@ -93,13 +93,13 @@
         }
 
         /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+        .main-intro-content {
+            padding-top: 10rem; /* Adjust this value based on header height + desired spacing */
+            display: block; /* Change from flex to block */
+            /* min-height: 100vh; Removed */
+            /* align-items: center; Removed */
             position: relative;
             overflow: hidden;
-            /* Remove glow effect */
             background: none; 
         }
 
@@ -742,7 +742,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="main-intro-content">
             <div class="container hero-content">
                 <h1>Software for Autonomous Defense Systems</h1>
                 <p>Olzh Tech builds modular software for drones, surveillance systems, and autonomous defense platforms. Founded in 2025 and based in Almaty, we develop sovereign technologies for nations and partners seeking control over their own security systems.</p>
