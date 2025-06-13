@@ -282,6 +282,11 @@
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
+            padding: 2.5rem;
+            background: var(--defense-gray);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--defense-turquoise); /* Subtle border */
         }
 
         .form-group {
@@ -616,12 +621,13 @@
         }
 
         .use-case-card {
-            background: var(--defense-black);
+            background-color: var(--defense-black);
             padding: 2rem;
             border-radius: 8px;
-            border: 1px solid rgba(0, 191, 178, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
+            border: 1px solid var(--defense-turquoise);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .use-case-card:hover {
@@ -638,6 +644,59 @@
         .use-case-card p {
             font-size: 0.95rem;
             color: var(--text-secondary);
+        }
+
+        /* Screenshot/Demo Section Styles */
+        .demo-section {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: var(--defense-black);
+            color: var(--text-primary);
+        }
+
+        .demo-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-image-container {
+            margin: 0 auto 2rem auto;
+            max-width: 900px;
+            border: 2px solid var(--defense-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .demo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .schedule-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--defense-blue);
+            color: var(--defense-black);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+            border: none;
+        }
+
+        .schedule-button:hover {
+            transform: translateY(-2px);
+            background: var(--defense-turquoise);
         }
 
         /* New System Architecture Section */
@@ -730,13 +789,249 @@
         .download-materials .optional-link a:hover {
             color: var(--defense-blue);
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: var(--defense-gray);
+            margin: auto;
+            padding: 30px;
+            border: 1px solid var(--defense-blue);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            color: var(--text-primary);
+        }
+
+        .close-button {
+            color: var(--text-secondary);
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--defense-blue);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: var(--defense-blue);
+            text-align: center;
+        }
+
+        .modal-content .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .modal-content .form-group input,
+        .modal-content .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--defense-turquoise);
+            border-radius: 4px;
+            background-color: var(--defense-black);
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .modal-content .form-group input:focus,
+        .modal-content .form-group textarea:focus {
+            border-color: var(--defense-blue);
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+        }
+
+        .modal-content .cta-button {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* New: Documentation Available Upon Request */
+        .documentation-note {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        /* New: News / Updates Section */
+        .news-updates {
+            background: var(--defense-black);
+            color: var(--text-primary);
+        }
+
+        .news-updates .section-title {
+            color: var(--text-primary);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .news-item {
+            background: var(--defense-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .news-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--defense-blue);
+        }
+
+        .news-item p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .read-more-link {
+            color: var(--defense-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more-link:hover {
+            color: var(--defense-turquoise);
+        }
+
+        /* New: Stealth Team Section */
+        .stealth-team section-divider-light {
+            background: var(--defense-black);
+            position: relative;
+            z-index: 1;
+        }
+
+        .stealth-team section-divider-light::before {
+            content: '';
+            position: absolute;
+            top: -1px; /* Overlap slightly with previous section */
+            left: 0;
+            width: 100%;
+            height: 100px; /* Height of the angled cut */
+            background: linear-gradient(to bottom right, var(--defense-black) 50%, var(--light-gray-panel) 50%);
+            transform-origin: top left;
+            transform: skewY(-2deg); /* Angle for the cut */
+            z-index: -1;
+        }
+
+        .stealth-team section-divider-dark {
+            background: var(--light-gray-panel);
+            color: var(--text-dark); /* Text color for light background */
+            position: relative;
+            z-index: 1;
+        }
+
+        .stealth-team section-divider-dark::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom left, var(--light-gray-panel) 50%, var(--defense-black) 50%);
+            transform-origin: top right;
+            transform: skewY(2deg);
+            z-index: -1;
+        }
+
+        .stealth-team section::before { /* Remove existing section border */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: none; /* Removed linear gradient border */
+        }
+
+        .stealth-team section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--defense-blue);
+            font-weight: 600; /* Increased heading weight */
+        }
+
+        .stealth-team team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: #FFFFFF; /* White background for cards */
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #E0E0E0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .team-card h3 {
+            font-size: 2.5rem;
+            color: var(--defense-blue);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .team-card p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .team-disclosure {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
             <a href="#hero" class="logo">
-                <img src="pictures/logo.png" alt="Olzh Tech Logo" class="logo-img">
+                <img src="images/olzh-tech-logo.png" alt="Olzh Tech Logo" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -749,27 +1044,40 @@
     </header>
 
     <main>
-        <section class="main-intro-content">
-            <div class="container hero-content">
-                <h1>Software for Autonomous Defense Systems</h1>
-                <p>Olzh Tech builds modular software for drones, surveillance systems, and autonomous defense platforms. Founded in 2025 and based in Almaty, we develop sovereign technologies for nations and partners seeking control over their own security systems.</p>
-                <a href="pictures/deck.pdf" class="cta-button">Request Overview Deck</a>
-            </div>
-        </section>
-
-        <section class="about section-divider-light">
+        <section class="hero main-intro-content" id="hero">
             <div class="container">
-                <h2 class="section-title">About Olzh Tech</h2>
-                <div class="about-content">
-                    <p>Founded in [Year], Olzh Tech develops advanced software systems for aerial autonomy, data protection, and battlefield orchestration. Our mission is to empower nations with robust, secure, and intelligent defense capabilities.</p>
-                    <p>Located in [City, Country], our team comprises seasoned engineers and defense strategists with deep expertise in aerospace, cybersecurity, and AI. We partner with leading defense integrators and government agencies to deliver world-class solutions for critical applications, including drones, border security, and industrial automation.</p>
+                <div class="hero-content">
+                    <h1>Sovereign Defense Software for a Complex World</h1>
+                    <p>Olzh Technologies delivers advanced, secure autonomy and ISR solutions to government and defense organizations. Enabling critical decision-making in contested environments.</p>
+                    <a href="#request-access-modal" class="cta-button" id="request-overview-deck-btn">Request Secure Access</a>
                 </div>
             </div>
         </section>
 
-        <section class="capabilities section-divider-dark">
+        <!-- New: Trusted Partners Section -->
+        <section class="trusted-partners section-divider-dark" id="partners">
             <div class="container">
-                <h2 class="section-title text-dark">Core Capabilities</h2>
+                <h2 class="section-title text-center">Trusted by Select Partners</h2>
+                <div class="partner-logos">
+                    <div class="partner-card">
+                        <div class="logo-placeholder"></div>
+                        <p>Confidential European Drone Integrator</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="logo-placeholder"></div>
+                        <p>Private ISR Lab – Eastern Europe</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="logo-placeholder"></div>
+                        <p>MENA Border Patrol Unit (Simulation Phase)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="section-divider-light">
+            <div class="container">
+                <h2 class="section-title">Core Capabilities</h2>
                 <div class="capabilities-grid">
                     <div class="capability-card">
                         <h3>Autonomy Engine</h3>
@@ -832,6 +1140,14 @@
                         <p>Tools for testing AI models in synthetic training environments.</p>
                     </div>
                 </div>
+                <!-- New: Capabilities Screenshot/Demo Image -->
+                <div class="demo-section">
+                    <div class="demo-image-container">
+                        <img src="images/operator-simulation-ui.png" alt="Operator Simulation UI" class="demo-image">
+                    </div>
+                    <span class="image-caption">Operator Simulation UI – Internal Build (2025 Q2)</span>
+                    <a href="#request-access-modal" class="schedule-button">Schedule Live Walkthrough (Gov. Only)</a>
+                </div>
             </div>
         </section>
 
@@ -843,6 +1159,32 @@
                         <img src="pictures/architecture-diagram.png" alt="System Architecture Diagram" class="placeholder-image">
                     </a>
                     <p class="image-subtext">Modular control plane—zero‑cloud, real‑time ops.</p>
+                    <!-- New: Documentation Available Upon Request -->
+                    <p class="documentation-note">Full architecture spec, security protocol, and STANAG compatibility documentation available upon request.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: News / Updates Section -->
+        <section class="news-updates section-divider-dark" id="news">
+            <div class="container">
+                <h2 class="section-title text-center">Latest Intelligence</h2>
+                <div class="news-grid">
+                    <div class="news-item">
+                        <h3>Olzh Tech Begins Closed Simulation Testing with European ISR Labs – Q2 2025</h3>
+                        <p>Information available under NDA.</p>
+                        <a href="#" class="read-more-link">Read More</a>
+                    </div>
+                    <div class="news-item">
+                        <h3>Preliminary Integration with NATO-Standard Drone Middleware Underway</h3>
+                        <p>Information available under NDA.</p>
+                        <a href="#" class="read-more-link">Read More</a>
+                    </div>
+                    <div class="news-item">
+                        <h3>Olzh Autonomy SDK Preview Deployed to Selected R&D Partners</h3>
+                        <p>Information available under NDA.</p>
+                        <a href="#" class="read-more-link">Read More</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -904,43 +1246,91 @@
             </div>
         </section>
         
+        <!-- New: Stealth Team Section -->
+        <section class="stealth-team section-divider-light" id="team">
+            <div class="container">
+                <h2 class="section-title text-center">Our Core Operatives</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-card-bg"></div>
+                        <h3>Aruzhan – Autonomy Lead</h3>
+                        <p>Ex-academic researcher in ML navigation systems.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-bg"></div>
+                        <h3>Dias – Comms Stack Architect</h3>
+                        <p>Built embedded comms frameworks for aerospace clients.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-bg"></div>
+                        <h3>[Redacted] – Senior Systems Engineer</h3>
+                        <p>Specialist in secure embedded systems for defense applications.</p>
+                    </div>
+                </div>
+                <p class="team-disclosure text-center">Advisor and government network disclosed in private briefings.</p>
+            </div>
+        </section>
+
         <section class="contact">
             <div class="container">
-                <h2 class="section-title">Request a Briefing</h2>
+                <h2 class="section-title">Secure Access Inquiry</h2>
                 <form class="contact-form">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="organization">Organization</label>
                         <input type="text" id="organization" name="organization">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
+                        <label for="reason">Reason for Access</label>
+                        <textarea id="reason" name="reason" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="cta-button">Submit Request</button>
+                    <button type="submit" class="cta-button">Submit Request for Access</button>
                 </form>
             </div>
         </section>
     </main>
 
+    <!-- Gated Overview Deck Modal -->
+    <div id="request-access-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Access Requires Verification</h2>
+            <p>Submit a request and we'll follow up with secure access to our technical brief.</p>
+            <form class="access-request-form">
+                <div class="form-group">
+                    <label for="modal-fullname">Full Name</label>
+                    <input type="text" id="modal-fullname" name="modal-fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-organization">Organization</label>
+                    <input type="text" id="modal-organization" name="modal-organization" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="modal-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-reason">Reason for Access</label>
+                    <textarea id="modal-reason" name="modal-reason" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
-                <!-- Removed LinkedIn, Whitepaper, Overview Deck links as per new instruction -->
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <span class="footer-separator">|</span>
+                <a href="#" class="footer-link">Terms</a>
+                <span class="footer-separator">|</span>
+                <a href="#" class="footer-link">Security Disclosure</a>
             </div>
-            <div class="social-icons">
-                <a href="mailto:mukhammeddulatolzhabay@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <p class="copyright">© 2025 Olzh Technologies. All Rights Reserved.</p>
+            <p class="footer-legal">All software and technologies are subject to export control restrictions.<br>For approved use only. © 2025 Olzh Technologies. Email: ops@olzhtech.kz</p>
         </div>
     </footer>
 
@@ -994,6 +1384,29 @@
             setTimeout(() => {
                 heroContent.classList.add('active');
             }, 300); // Small delay
+
+            // Gated Overview Deck Modal functionality
+            const requestDeckBtn = document.getElementById('request-overview-deck-btn');
+            const requestAccessModal = document.getElementById('request-access-modal');
+            const closeModalBtn = requestAccessModal.querySelector('.close-button');
+
+            if (requestDeckBtn && requestAccessModal && closeModalBtn) {
+                requestDeckBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    requestAccessModal.classList.add('active');
+                });
+
+                closeModalBtn.addEventListener('click', () => {
+                    requestAccessModal.classList.remove('active');
+                });
+
+                // Close modal when clicking outside of it
+                window.addEventListener('click', (e) => {
+                    if (e.target == requestAccessModal) {
+                        requestAccessModal.classList.remove('active');
+                    }
+                });
+            }
         });
     </script>
 </body>
