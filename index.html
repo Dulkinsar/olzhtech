@@ -13,8 +13,8 @@
             --defense-black: #080808; /* Darker black */
             --defense-gray: #151515; /* Slightly lighter gray for contrast */
             --light-gray-panel: #F0F0F0; /* New light gray panel color */
-            --defense-blue: #00BFB2; /* Flatter turquoise/cyan */
-            --defense-turquoise: #00A39C; /* Flatter, slightly darker turquoise */
+            --defense-blue: #007BFF; /* A more standard, slightly desaturated tech blue */
+            --defense-turquoise: #0056B3; /* Darker shade for accents/hover */
             --text-primary: #FFFFFF;
             --text-secondary: #CCCCCC; /* Lighter secondary text */
             --text-dark: #333333; /* For use on light backgrounds */
@@ -66,10 +66,15 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--defense-blue);
+            /* Removed font-size and font-weight as it's now an image */
+            /* color: var(--defense-blue); */
             text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px; /* Adjust as needed for logo size */
+            width: auto;
+            filter: brightness(1.2); /* Slightly increase brightness if needed for visibility */
         }
 
         .nav-links {
@@ -723,12 +728,16 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">OLZH TECH</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <a href="#hero" class="logo">
+                <img src="pictures/logo.png" alt="Olzh Tech Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
